@@ -541,29 +541,146 @@
 // }
 
 
-let shaOrg = {
-    name : 'javid',
-    detail : {
-        age : 19
-    }
-}
-let shallow = {...shaOrg}
-shallow.detail.age = 20
+// let shaOrg = {
+//     name : 'javid',
+//     detail : {
+//         age : 19
+//     }
+// }
+// let shallow = {...shaOrg}
+// shallow.detail.age = 20
 
-console.log(shaOrg);
-console.log(shallow);
-
-
+// console.log(shaOrg);
+// console.log(shallow);
 
 
-let deeOrg = {
-    name : 'alice',
-    detail : {
-        age : 21
-    }
-}
-let deep = JSON.parse(JSON.stringify(deeOrg))
-deep.detail.age = 23
 
-console.log(deeOrg);
-console.log(deep);
+
+// let deeOrg = {
+//     name : 'alice',
+//     detail : {
+//         age : 21
+//     }
+// }
+// let deep = JSON.parse(JSON.stringify(deeOrg))
+// deep.detail.age = 23
+
+// console.log(deeOrg);
+// console.log(deep);
+
+
+
+// function fetchData() {
+//     return new Promise((resolve, reject) => {
+//         let success = false;
+//         success ? resolve('Data Fetch Successsful') : reject('Data Fetch Failed')
+//     })
+// }
+
+// fetchData()
+//     .then((data) => console.log(data))
+//     .catch((error) => console.log(error))
+//     .finally(() => console.log("Must Run"))
+
+
+
+// const fetched = async () => {
+//     try {
+//         console.log('Success');
+//     } catch (error) {
+//         console.log('failed', error);
+//     } finally {
+//         console.log('Run');
+//     }
+// }
+
+// fetched()
+
+// fetch("https://jsonplaceholder.typicode.com/todos/1")
+//     .then((response) => {
+//         if (!response.ok) {
+//             throw new Error(`HTTP requested failed ${response.status}`)
+//         }
+//         return response.json()
+//     })
+//     .then((data) => console.log(data))
+//     .catch((error) => console.log(error))
+//     .finally(() => console.log('Must run code'))
+
+
+
+
+// console.log("Start");
+
+// setTimeout(() => console.log("Inside setTimeout"), 0);
+
+// Promise.resolve().then(() => console.log("Inside Promise"));
+
+// console.log("End");
+
+
+
+
+
+
+
+
+
+
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+//     .then((response) => {
+//         if(!response.ok) {
+//             throw new Error(`HTTP request ${response.status}`)
+//         }
+//         return response.json()
+//     })
+//     .then((data) => console.log(data))
+//     .catch((error) => console.log(error))
+
+
+
+// function memoaiz(fn) {
+//     let cache = {}
+
+//     return function (x) {
+//         if (cache[x] !== undefined) {
+//             console.log('Fetching from cache', x);
+//             return cache[x]
+//         }
+//         let result = fn(x)
+//         console.log("Executing function", x);
+//         cache[x] = result
+//         return result  
+//     }
+// }
+
+// function sum(a) {
+//     return a * a
+// }
+
+// const total = memoaiz(sum)
+
+// console.log(total(5));
+// console.log(total(6));
+// console.log(total(5));
+
+
+
+
+// function addTask() {
+//     const inputTask = document.getElementById('inputTask')
+// const  inputText = inputTask.value.trim()
+
+// if(inputText) {
+//     const li = document.createElement('li')
+//     li.innerText = inputText;
+
+//     const deletebtn = document.createElement('button')
+//     deletebtn.innerText = 'Remove';
+//     deletebtn.onclick = () => li.remove()
+
+//     li.appendChild(deletebtn)
+//     document.getElementById('taskList').appendChild(li)
+//     inputTask.value = ''
+// }
+// }

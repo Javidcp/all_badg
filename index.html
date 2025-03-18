@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Badging</title>
     <style>
-        .high {
+        /*.high {
             background-color: aqua;
         }
         #move{
@@ -14,9 +14,86 @@
     background-color: red;
     position: relative;
         }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            
+            justify-content: center;
+            gap: 10px;
+            width: 600px;
+            background-color: aqua;
+            margin: 50px auto;
+            padding: 10px;
+        }
+        .item {
+            background-color: black;
+            width: 30%;
+            height: 120px;
+            
+        }
+        .item-1{
+            height: 200px;
+        }*/
+        *{
+            margin: 0;
+        }
+
+        .contain {
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;
+            height: 500px;
+            width: 500px;
+            border: 1px solid black;
+            justify-content: space-between; /* Space between left & right */
+            align-content: space-between;
+        }
+
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            position: absolute;
+        }
+
+        .top-left { top: 0; left: 0; }
+        .top-right { top: 0; right: 0; }
+        .end-left { bottom: 0; left: 0; }
+        .end-right { bottom: 0; right: 0; }
+        
+
     </style>
 </head>
 <body>
+
+
+
+
+
+<!-- 
+
+<div class="container">
+    <div class="item item-1"></div>
+    <div class="item item-2"></div>
+    <div class="item item-3"></div>
+    <div class="item item-4"></div>
+    <div class="item item-5"></div>
+    <div class="item item-6"></div>
+</div> -->
+
+
+
+
+
+
+
     
 <!-- <div id="demo">f</div>
 <button id="change">change</button>
@@ -36,6 +113,22 @@
 <!-- <input type="text" id="inputTask">
 <button onclick="addTask()">Add</button>
 <ul id="taskList"></ul> -->
+
+
+
+
+<!-- 
+<input type="text" id="inputTask">
+<button onclick="addTask()">Add</button>
+<ul id="taskList"></ul> -->
+
+
+<div class="contain">
+    <div class="item top-left"></div>
+    <div class="item top-right"></div>
+    <div class="item end-left"></div>
+    <div class="item end-right"></div>
+</div>
 
 
     <script src="script.js"></script>
