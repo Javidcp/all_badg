@@ -639,48 +639,48 @@
 
 
 
-// function memoaiz(fn) {
-//     let cache = {}
+function memoaiz(fn) {
+    let cache = {}
 
-//     return function (x) {
-//         if (cache[x] !== undefined) {
-//             console.log('Fetching from cache', x);
-//             return cache[x]
-//         }
-//         let result = fn(x)
-//         console.log("Executing function", x);
-//         cache[x] = result
-//         return result  
-//     }
-// }
+    return function (x) {
+        if (cache[x] !== undefined) {
+            console.log('Fetching from cache', x);
+            return cache[x]
+        }
+        let result = fn(x)
+        console.log("Executing function", x);
+        cache[x] = result
+        return result  
+    }
+}
 
-// function sum(a) {
-//     return a * a
-// }
+function sum(a) {
+    return a * a
+}
 
-// const total = memoaiz(sum)
+const total = memoaiz(sum)
 
-// console.log(total(5));
-// console.log(total(6));
-// console.log(total(5));
-
-
+console.log(total(5));
+console.log(total(6));
+console.log(total(5));
 
 
-// function addTask() {
-//     const inputTask = document.getElementById('inputTask')
-// const  inputText = inputTask.value.trim()
 
-// if(inputText) {
-//     const li = document.createElement('li')
-//     li.innerText = inputText;
 
-//     const deletebtn = document.createElement('button')
-//     deletebtn.innerText = 'Remove';
-//     deletebtn.onclick = () => li.remove()
+function addTask() {
+    const inputTask = document.getElementById('inputTask')
+const  inputText = inputTask.value.trim()
 
-//     li.appendChild(deletebtn)
-//     document.getElementById('taskList').appendChild(li)
-//     inputTask.value = ''
-// }
-// }
+if(inputText) {
+    const li = document.createElement('li')
+    li.innerText = inputText;
+
+    const deletebtn = document.createElement('button')
+    deletebtn.innerText = 'Remove';
+    deletebtn.onclick = () => li.remove()
+
+    li.appendChild(deletebtn)
+    document.getElementById('taskList').appendChild(li)
+    inputTask.value = ''
+}
+}
